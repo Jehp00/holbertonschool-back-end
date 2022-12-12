@@ -3,10 +3,12 @@
 
 """
 
-import requests
 import json
+import requests
 
 url = 'https://jsonplaceholder.typicode.com/todos/'
 response = requests.get(url)
 response_json = response.json()
-id = response_json['id']
+return("Employee {} is done with tasks\
+    ({}/{}):".format(response_json.name, 
+    NUMBER_OF_DONE_TASKS, TOTAL_NUMBER_OF_TASKS))
