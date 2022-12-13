@@ -39,5 +39,5 @@ def gather_data_from_an_api():
         print('\t ' + t)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     gather_data_from_an_api()
