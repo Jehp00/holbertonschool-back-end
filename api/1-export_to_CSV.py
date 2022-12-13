@@ -26,7 +26,7 @@ def gather_data_from_an_api():
     for t in content:
         l = []
         l.append(str(t['userId']))
-        l.append(str(content_name[0]['name']))
+        l.append(str(content_name[0]['username']))
         l.append(str(t['completed']))
         l.append(str(t['title']))
         result.append(l)
