@@ -33,7 +33,6 @@ def gather_data_from_an_api():
     r = {}
     r['{}'.format(sys.argv[1])] = attr
 
-
     JS = json.dumps(r)
 
     with open('{}.json'.format(sys.argv[1]), 'w') as f:
