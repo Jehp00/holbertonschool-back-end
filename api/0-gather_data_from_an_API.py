@@ -10,12 +10,11 @@ import requests
 import sys
 
 
+url = 'https://jsonplaceholder.typicode.com/todos?userId='
+url_name = 'https://jsonplaceholder.typicode.com/users?id='
+
 def gather_data_from_an_api():
     """substract elemnts from the api"""
-
-    url = 'https://jsonplaceholder.typicode.com/todos?userId='
-    url_name = 'https://jsonplaceholder.typicode.com/users?id='
-
     response = requests.get(url + sys.argv[1])
     response_name = requests.get(url_name + sys.argv[1])
 
