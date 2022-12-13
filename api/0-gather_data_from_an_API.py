@@ -13,13 +13,13 @@ url = 'https://jsonplaceholder.typicode.com/todos?userId='
 url_name = 'https://jsonplaceholder.typicode.com/users?id='
 
 
-def get_param():
+def gather_data_from_api():
     """substract elemnts from the api"""
     response = requests.get(url + sys.argv[1])
     response_name = requests.get(url_name + sys.argv[1])
 
-    content = [response.json()]
-    content_name = [response.json()]
+    content = list(response.json())
+    content_name = list(response_name.json())
 
     completed_tasks = 0
     num_of_tasks = 0
@@ -28,14 +28,14 @@ def get_param():
     for t in content:
         if t['completed']:
             completed_tasks += 1
-            completed_tasks.append(t['title'])
-        tasks += 1
+            tasks.append(t['title'])
+        num_of_tasks += 1
 
     print("Employee {} is done with tasks({}/{}):".format(
-        content_name[0]['name'], task_completed, total_tasks))
-    for t in completed_tasks:
+        content_name[0]['name'], completed_tasks, num_of_tasks))
+    for t in tasks:
         print('\t' + t)
 
 
 if __name__ == '__main__':
-    get_param()
+    gather_data_from_api()
