@@ -13,6 +13,7 @@ import sys
 url = 'https://jsonplaceholder.typicode.com/todos?userId='
 url_name = 'https://jsonplaceholder.typicode.com/users?id='
 
+
 def gather_data_from_an_api():
     """substract elemnts from the api"""
     response = requests.get(url + sys.argv[1])
