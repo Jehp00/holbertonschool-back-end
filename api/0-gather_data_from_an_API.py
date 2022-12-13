@@ -34,7 +34,7 @@ def gather_data_from_api():
     print("Employee {} is done with tasks({}/{}):".format(
         content_name[0]['name'], completed_tasks, num_of_tasks))
     for t in tasks:
-        print('\t' + t)
+        print('\t ' + t)
 
 
 if __name__ == '__main__':
