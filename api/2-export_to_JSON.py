@@ -27,7 +27,7 @@ def gather_data_from_an_api():
         d = {}
         d['task'] = t['title']
         d['completed'] = t['completed']
-        d['name'] = content_name[0]['name']
+        d['name'] = content_name[0]['username']
         attr.append(d)
 
     r = {}
