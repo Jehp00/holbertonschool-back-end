@@ -9,7 +9,8 @@ Script than return the Todo list with
 import requests
 import sys
 
-def gather_data_from_api():
+
+def gather_data_from_an_api():
     """substract elemnts from the api"""
 
     url = 'https://jsonplaceholder.typicode.com/todos?userId='
@@ -38,4 +39,4 @@ def gather_data_from_api():
 
 
 if __name__ == '__main__':
-    gather_data_from_api()
+    gather_data_from_an_api()
