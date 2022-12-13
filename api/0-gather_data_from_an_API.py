@@ -5,7 +5,6 @@ Script than return the Todo list with
     number of done tasks
     number of tasks
 """
-
 import requests
 import sys
 
@@ -16,6 +15,7 @@ url_name = 'https://jsonplaceholder.typicode.com/users?id='
 
 def gather_data_from_an_api():
     """substract elemnts from the api"""
+
     response = requests.get(url + sys.argv[1])
     response_name = requests.get(url_name + sys.argv[1])
 
